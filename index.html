@@ -22,53 +22,65 @@
         }
 
         .container {
+            border-radius: 30px;
+            box-shadow: 2px 2px 5px 2px;
             position: relative;
             gap: 30px;
-            width: 70%;
-            height:60%;
+            width: 95%;
+            height:95%;
             display:flex;
             justify-content: center;
             flex-direction: column;
             align-items: center;
             border: 2px solid;
-            overflow: scroll;
+            /* overflow: scroll; */
 
         }
 
         button {
-            width: 100px;
-            height: 40px;
+            width: 120px;
+            height: 45px;
             border-radius: 9px;
 
+        }
+        #btnno{
+            color:#aba7a7f6;
+            font-size: 21px;
+            font-weight:100;
+        }
+        #btnyes{
+            /* color; */
+            font-size: 20px;
+            font-weight:900;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>hello</h1>
+        <h1>Hello</h1>
         <div class="btn-container">
-            <button id="btnyes">yes</button>
-            <button id="btnno">No</button>
+            <button id="btnyes">❤️</button>
+            <button id="btnno">x</button>
         </div>
     </div>
     <script>
         let yes = document.querySelector("#btnyes");
         let no = document.querySelector("#btnno");
         yes.addEventListener("click", function () {
-            alert("hey !");
+            alert("Hey !");
+        });
+        no.addEventListener("click", function () {
+            alert("___Bad-boy___");
         });
 
         no.addEventListener("mouseenter", function () {
-            let rml = Math.floor(Math.random() * 250);
-            let rmt = Math.floor(Math.random() * 100);
-            let t = Math.floor(Math.random() * 200);
-            let l = Math.floor(Math.random() * 100);
-
+            let rml = Math.floor(Math.random() * 70);
+            let rmt = Math.floor(Math.random() * 70);
             no.style.position = "absolute";
-            no.style.left = rml +"px";
-            console.log(rml+l, " and ",t,rmt)
-            no.style.top =rmt+t+"px";
+            no.style.left = rml+"%";
+            console.log(rml, " and ",rmt)
+            no.style.top =rmt+"%";
         });
         
 
